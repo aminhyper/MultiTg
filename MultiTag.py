@@ -27,6 +27,8 @@ while i < count_of_pairs:
     line5 = '        tag => <<"%s">>},\n'%tag
     if i != 0:
         line1 = '     #{name => mtp_handler_%d,\n'%(i+1)
+    if i == count_of_pairs -1 :
+        line5 = '        tag => <<"%s">>}\n' % tag
     l_text.append(line1)
     l_text.append(line2)
     l_text.append(line3)
