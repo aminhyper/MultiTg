@@ -1,4 +1,3 @@
-import subprocess
 count_of_pairs = int(input('Please enter count of pairs?'))
 list_items = []
 i = 1
@@ -26,7 +25,7 @@ while i < count_of_pairs:
     line3 = '        port => %s,\n'%port
     line4 = '        secret => <<"%s">>,\n'%secret
     line5 = '        tag => <<"%s">>},\n'%tag
-    if i == 0:
+    if i != 0:
         line1 = '     #{name => mtp_handler_%d,\n'%(i+1)
     l_text.append(line1)
     l_text.append(line2)
