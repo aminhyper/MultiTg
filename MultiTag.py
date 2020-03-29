@@ -83,9 +83,10 @@ ip = [l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2]
 for item in list_items:
     normal_link = 'https://t.me/proxy?server=%s&port=%s&secret=%s'%(ip,list_items[n]['port%s'%(n+1)],list_items[n]['secret%s'%(n+1)])
     secure_link = 'https://t.me/proxy?server=%s&port=%s&secret=dd%s'%(ip,list_items[n]['port%s'%(n+1)],list_items[n]['secret%s'%(n+1)])
+    faketls_link =  'https://t.me/proxy?server=%s&port=%s&secret=ee%s676f6f676c652e636f6d'%(ip,list_items[n]['port%s'%(n+1)],list_items[n]['secret%s'%(n+1)])
     print('Normal link #%s:'%(n+1),normal_link)
     print('Secure link #%s:'%(n+1),secure_link)
-
+    print('Fake-TLS link #%s:'%(n+1),faketls_link)
     print('------------------')
     n += 1
 
