@@ -1,4 +1,5 @@
-count_of_pairs = int(input('Please enter count of items?'))
+import socket
+count_of_pairs = int(input('Please enter count of pairs?'))
 list_items = []
 i = 1
 while i < (count_of_pairs+1):
@@ -77,6 +78,14 @@ with open('prod-sys-exam.config','w') as conf_file:
     conf_file.write(total_text)
 
 print('Done successfully!')
+n = 0
+ip = [l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
+for item in list_items:
+    normal_link = 'https://t.me/proxy?server=%s&port=%s&secret=%s'%(ip,list_items[n]['port%s'%(n+1)],list_items[n]['secret%s'%(n+1)])
+    secure_link = 'https://t.me/proxy?server=%s&port=%s&secret=dd%s'%(ip,list_items[n]['port%s'%(n+1)],list_items[n]['secret%s'%(n+1)])
+    print('Normal link #%s:'%(n+1),normal_link)
+    print('Secure link #%s:'%(n+1),secure_link)
 
-
+    print('------------------')
+    n += 1
 
