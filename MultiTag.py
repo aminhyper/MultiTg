@@ -1,3 +1,4 @@
+import subprocess
 count_of_pairs = int(input('Please enter count of pairs?'))
 list_items = []
 i = 1
@@ -73,5 +74,7 @@ total_text = total_text + final_text
 
 with open('prod-sys-exam.config','w') as conf_file:
     conf_file.write(total_text)
+print('Done successfully!')
+
 
 
