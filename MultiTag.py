@@ -26,8 +26,8 @@ while i < count_of_pairs:
     line3 = '        port => %s,\n'%port
     line4 = '        secret => <<"%s">>,\n'%secret
     line5 = '        tag => <<"%s">>},\n'%tag
-    if i == count_of_pairs-1:
-        line5 = '        tag => <<"%s">>}\n'%tag
+    if i == 0:
+        line1 = '     #{name => mtp_handler_%d,\n'%(i+1)
     l_text.append(line1)
     l_text.append(line2)
     l_text.append(line3)
@@ -74,6 +74,7 @@ total_text = total_text + final_text
 
 with open('prod-sys-exam.config','w') as conf_file:
     conf_file.write(total_text)
+
 print('Done successfully!')
 
 
