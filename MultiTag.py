@@ -1,4 +1,4 @@
-count_of_pairs = int(input('Please enter count of pairs?'))
+count_of_pairs = int(input('Please enter count of items?'))
 list_items = []
 i = 1
 while i < (count_of_pairs+1):
